@@ -1,6 +1,7 @@
 # Flappy Bird Clone with p5.js
 
-![Flappy Bird Clone](![Flappygif](https://github.com/Kaserollinss/Flappy-Bird/assets/156269387/3e84bf52-f6da-49dc-9609-590386f5f523))
+![Flappy Bird Clone]
+![Flappygif](https://github.com/Kaserollinss/Flappy-Bird/assets/156269387/3e84bf52-f6da-49dc-9609-590386f5f523)
 
 
 ## Overview
