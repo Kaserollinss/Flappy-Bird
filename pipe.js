@@ -1,8 +1,8 @@
 class Pipes {
   constructor(x) {
-    this.x = width + x;
+    this.x = width + x; 
     this.bottomY = random(175, 425);
-    this.pipeGap = -450;
+    this.pipeGap = -450; // gap between pipes on the same vertical axis
     this.topY = this.bottomY + this.pipeGap;
     this.passed = false;
   }
@@ -35,10 +35,10 @@ class Pipes {
     image(bottomPipe, this.x, this.bottomY);
     image(topPipe, this.x, this.topY);
   }
-  update() {
+  update() { 
     this.x -= panSpeed;
-    if (this.checkOnScreen() === false) {
-      this.x = 600 - bottomPipe.width;
+    if (this.checkOnScreen() === false) { // updates the location of the pipes and assigns new height if off screen
+      this.x = 600 - bottomPipe.width; 
       this.bottomY = random(175, 425);
       this.pipeGap = -450;
       this.topY = this.bottomY + this.pipeGap;

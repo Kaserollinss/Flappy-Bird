@@ -4,6 +4,7 @@ let pipes = [];
 let gameStarted = false;
 
 function preload() {
+  // Preload all game sprites
   bg = loadImage("sprites/background-day.png");
   groundSprite = loadImage("sprites/base.png");
   birdU = loadImage("sprites/yellowbird-upflap.png");
@@ -22,7 +23,7 @@ function setup() {
   textSize(40);
 
   bird = new Bird();
-  pipes[0] = new Pipes(300);
+  pipes[0] = new Pipes(300); // initialize pipe sets 
   pipes[1] = new Pipes(500);
   pipes[2] = new Pipes(700);
   ground = new Ground();
@@ -35,7 +36,7 @@ function keyPressed() {
     }
   }
 }
-function draw() {
+function draw() { // Game loop
   if (gameStarted) {
     bird.tilt = 45;
 

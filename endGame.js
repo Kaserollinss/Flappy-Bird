@@ -1,10 +1,10 @@
 let endGame = () => {
   x = width / 2;
   y = height / 4;
-  scaleFactor = 1.2;
+  scaleFactor = 1.2; // scale factor to increase image size
   w = 192 * scaleFactor;
   h = 42 * scaleFactor;
-  w1 = 342 / 2.5;
+  w1 = 342 / 2.5;  // 2.5 is scale factor to reduce image size
   h1 = 450 / 2.5;
   if (bird.alive) {
     text(bird.score, x - 12, height / 7);

@@ -3,9 +3,9 @@ class Bird {
     this.x = width / 3;
     this.y = height / 2;
     this.velocity = 0;
-    this.gravity = 0.5;
-    this.flapHeight = -10;
-    this.flaps = [birdU, birdM, birdD];
+    this.gravity = 0.5; 
+    this.flapHeight = -10; // how high the bird goes each flap
+    this.flaps = [birdU, birdM, birdD]; // 3 images for flap animation cycle. See sketch.js lines 9-11
     this.alive = true;
     this.tilt = 45;
     this.h = 24;
@@ -14,7 +14,7 @@ class Bird {
   }
 
   checkCollision() {
-    if (this.y + this.w / 2 > 470) {
+    if (this.y + this.w / 2 > 470) { // checks collisions with the ground
       this.velocity = 0;
       this.alive = false;
       panSpeed = 0;
@@ -32,7 +32,7 @@ class Bird {
     this.alive = false;
   }
 
-  show() {
+  show() { 
     if (this.alive) {
       this.animate();
     } else {
@@ -53,11 +53,11 @@ class Bird {
     this.velocity += this.flapHeight;
   }
 
-  animate() {
+  animate() {  
     push();
     translate(this.x, this.y);
     imageMode(CENTER);
-    if (this.velocity < 0) {
+    if (this.velocity < 0) {  // controls the angle of the bird based on its velocity 
       rotate(-this.tilt);
     } else {
       rotate(this.tilt);
@@ -65,10 +65,10 @@ class Bird {
     image(this.flaps[animateFrame], 0, 0, this.w, this.h);
     pop();
 
-    //if frame count % 3, increment sumthnig
+   // controls the speed of the "flap" animation
     if (frameCount % 5 === 0) {
       animateFrame++;
-      if (animateFrame == 3) {
+      if (animateFrame == 3) { // cycles through the 3 images in this.flaps
         animateFrame = 0;
       }
     }
