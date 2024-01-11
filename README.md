@@ -25,7 +25,7 @@ In the near future I plan to implement some sort of AI agent in this flappy bird
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/flappy-bird-clone.git
+   git clone https://github.com/Kaserollinss/Flappy-Bird.git
    cd flappy-bird-clone
 2. **Open index.html in your Browser:**
    Open the index.html file in your preferred web browser.
